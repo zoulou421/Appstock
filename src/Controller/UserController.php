@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class UserController extends AbstractController
+{
+    #[Route('/User/liste', name: 'app_user_liste'), isGranted('ROLE_ADMIN')]
+    public function index(): Response
+    {
+        return $this->render('user/liste.html.twig');
+    }
+}

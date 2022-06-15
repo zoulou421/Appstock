@@ -1,0 +1,10 @@
+{% extends 'heritage.html.twig' %}
+
+{% block titreDuDocument %} 
+    Nouveau Titre 
+{% endblock %}
+
+{% block corpsDuDocument %}
+    {{ parent() }}
+        J'adore l'héitage dans TWIG
+    {% endblock %}

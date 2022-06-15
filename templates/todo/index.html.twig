@@ -1,0 +1,34 @@
+{% extends "template.html.twig" %}
+
+{% block body %}
+    {%  for message in app.session.flashBag.get('info') %}
+        <div class="alert alert-info">
+         {{ message }}
+       </div>
+    {% endfor %}
+    
+    {%  for message in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+         {{ message }}
+       </div>
+    {% endfor %}
+    
+    {%  for message in app.session.flashBag.get('error') %}
+        <div class="alert alert-danger">
+         {{ message }}
+       </div>
+    {% endfor %}
+    
+     {% block PageTitle %}
+        Liste des Todos
+     {% endblock %}   
+    </h1
+
+ <Ol class="list-group">
+     {% for name, content in app.session.get('todos') %}
+  <li class="list-group-item">{{ name }}:{{ content }}</li>
+    {%  endfor %}
+</Ol>
+   
+{% endblock %}
+

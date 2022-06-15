@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>visite!</title>
+  </head>
+  <body>
+      <p>: Aujourd'hui on est le {{ "now" | date("d/m/Y")}}</p> 
+      <h1>Hello: {{ firstname | capitalize }} {{ name | capitalize }}</h1>
+     <img src="{{ asset('assets/images/')~ path | defaultImage }}"  alt="">
+   
+  </body>
+</html>

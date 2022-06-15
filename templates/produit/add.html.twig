@@ -1,0 +1,30 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}produits{% endblock %}
+
+{% block body %}
+
+ <div class="container row">
+       <div class="card col-md-6">
+           <div class="card header"> Formulaire de rajout des produits</div>
+           <div class="card-body">
+                {#{ form(form) }#} 
+                {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                 <div class="row">
+                    <div class="row">{{ form_row(form.libelle) }}</div> 
+                    <div class="row">{{ form_row(form.qtestock) }}</div> 
+        
+                {{ form_rest(form) }}
+                  </div>
+           </div>
+       </div>
+ </div>
+
+ {% block javascripts %}
+  <script>
+    $(document).ready(function() {
+    $('.select2').select2();
+    });
+  </script>
+  {% endblock %}
+{% endblock %}

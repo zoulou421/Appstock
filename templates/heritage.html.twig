@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <title>{% block titreDuDocument %} Titre par defaut du Document {% endblock %}</title>
+  </head>
+  
+  
+  <body>
+      Header
+    <hr>
+    {% block corpsDuDocument %}
+        contenu du bloc par defaut corpsDuDocument
+    {% endblock %}
+    <hr>
+    
+    Footer
+  </body>
+  
+</html>

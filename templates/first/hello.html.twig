@@ -1,0 +1,10 @@
+{% extends "template.html.twig" %}
+
+{% block title %}
+{{ firstname }}{{ name }}
+{% endblock %}
+
+{% block body %}
+<h1>Hello: {{ firstname| capitalize }}{{ name| capitalize }}</h1>
+{# <img src="{{ asset('assets/images/')~ path | defaultImage }}"  alt="">#}
+{% endblock %}
